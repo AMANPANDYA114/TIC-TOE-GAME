@@ -1,0 +1,139 @@
+/* {
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.player{
+    border:2px solid rgba(0, 0, 255, 0.84);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    font-size: 27px;
+    /* max-width:  300px; */
+
+/* }
+.player div{
+    padding:  15px 25px;
+
+    border-radius: 15px;
+    border:2px solid white;
+
+}
+.player div.active
+{
+    background-color: blue;
+    color: white;
+    
+}
+.gameboard{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+}
+.cell {
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+
+}    */
+*{
+    box-sizing: border-box;
+}
+body{
+
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.player{
+    border:2px solid rgba(0, 0, 255, 0.84);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    font-size: 27px;
+}
+.player div{
+    padding:  15px 25px;
+    border-radius: 15px;
+    border:2px solid white;
+}
+.player div.active {
+    background-color: blue;
+    color: white;   
+}
+.gameboard{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    
+}
+.cell {
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    border-radius: 7px;
+    font-size: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+/* :nth-child(1){
+    border-left: none;
+    border-top: none;
+} */
+.cell:nth-child(1), .cell:nth-child(2), .cell:nth-child(3)
+{
+    border-top: none;
+}
+.cell:nth-child(1), .cell:nth-child(4), .cell:nth-child(7)
+{
+    border-left: none;
+}
+.cell:nth-child(3), .cell:nth-child(6), .cell:nth-child(9)
+{
+    border-right: none;
+}
+.cell:nth-child(7), .cell:nth-child(8), .cell:nth-child(9)
+{
+    border-bottom: none;
+}
+.result{
+    position: fixed;
+    top:0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 99px;
+    background: rgb(0,0,0,0.5);
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction: column;
+
+}
+.result h1{
+    color: white;
+}
+.result button{
+    font-size: 19px;
+    cursor: pointer;
+    background-color: blue;
+    color: white;
+    border-radius: 10px;
+}
+.inactive{
+    display: none;
+}
+.disable{
+    pointer-events: none;
+}
